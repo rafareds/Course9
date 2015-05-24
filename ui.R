@@ -1,3 +1,5 @@
+library(shiny)
+
 shinyUI(pageWithSidebar(
   headerPanel("Dengue Fever Cases"),
   sidebarPanel(
@@ -5,6 +7,9 @@ shinyUI(pageWithSidebar(
   ),
   mainPanel(
     tabsetPanel(
+      tabPanel(p(icon("table"), "Dataset"),
+               dataTableOutput(outputId="dTable")
+      ),
       tabPanel("Plot1", plotOutput('plot1')),
       tabPanel("Plot2", plotOutput('plot2'))
     )
