@@ -1,16 +1,4 @@
-dengue2 <- read.table("https://raw.githubusercontent.com/rafareds/Course9/master/dengue2.txt",
-                     h = T)
-meses <- c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
-dengue2$meses <- rep(meses,15)
-dengue2$ano <- c(rep(2000,12),rep(2001,12),rep(2002,12),rep(2003,12),
-                rep(2004,12),rep(2005,12),rep(2006,12),rep(2007,12),
-                rep(2008,12),rep(2009,12),rep(2010,12),rep(2011,12),
-                rep(2012,12),rep(2013,12),rep(2014,12))
-write.table(dengue2, 
-            "https://raw.githubusercontent.com/rafareds/Course9/master/dengue.txt",
-            row.names = F)
-
-dengue <- read.table("C:\\Users\\Rafael\\Documents\\Coursera\\Shiny\\project\\dengue.txt",
+dengue <- read.table("https://raw.githubusercontent.com/rafareds/Course9/master/dengue.txt",
                      h = T)
 
 graf1 <- function(anoIn){
